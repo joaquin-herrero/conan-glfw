@@ -130,3 +130,5 @@ class GlfwConan(ConanFile):
                 self.cpp_info.exelinkflags.append("-lrt -lm -ldl")
         elif self.settings.os == "Macos":
             self.cpp_info.exelinkflags.append("-framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo")
+
+            self.cpp_info.sharedlinkflags = self.cpp_info.exelinkflags
